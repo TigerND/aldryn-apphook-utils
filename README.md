@@ -1,4 +1,6 @@
 ## aldryn-apphooks-config-utils
+[![Build Status](https://travis-ci.org/TigerND/aldryn-apphooks-config-utils.svg?branch=master)](https://travis-ci.org/TigerND/aldryn-apphooks-config-utils)
+
 Utils for aldryn-apphooks-config
 
 ### Example usage
