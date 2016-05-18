@@ -10,14 +10,14 @@ register = template.Library()
 
 
 @register.simple_tag(takes_context=True)
-def aldryn_apphoks_config(context, *args, **kwargs):
+def aldryn_apphooks_config(context, *args, **kwargs):
     """
     Example:
 
-        {% load aldryn_apphoks_config_utils %}
+        {% load aldryn_apphooks_config_utils %}
 
         {% block content %}
-            {% aldryn_apphoks_config %}
+            {% aldryn_apphooks_config %}
             Namespace: "{{ namespace }}", Config: "{{ config }}"
         {% endblock %}
     """
@@ -42,20 +42,20 @@ class AldrynApphooksConfigNode(Node):
             return self.nodelist.render(context)
 
 
-@register.tag('with_aldryn_apphoks_config')
-def with_aldryn_apphoks_config(parser, token):
+@register.tag('with_aldryn_apphooks_config')
+def with_aldryn_apphooks_config(parser, token):
     """
     Example:
 
-        {% load aldryn_apphoks_config_utils %}
+        {% load aldryn_apphooks_config_utils %}
 
         {% block content %}
-            {% with_aldryn_apphoks_config %}
+            {% with_aldryn_apphooks_config %}
                Namespace: "{{ namespace }}", Config: "{{ config }}"
-            {% endwith_aldryn_apphoks_config %}
+            {% endwith_aldryn_apphooks_config %}
         {% endblock %}
     """
 
-    nodelist = parser.parse(('endwith_aldryn_apphoks_config',))
+    nodelist = parser.parse(('endwith_aldryn_apphooks_config',))
     parser.delete_first_token()
     return AldrynApphooksConfigNode(nodelist)
