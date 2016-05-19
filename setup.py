@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='aldryn-apphooks-config-utils',
-    version='0.1.0',
+    version='0.1.1',
     description='aldryn-apphooks-config-utils',
     author='Aleksandr Zykov',
     author_email='tiger@vilijavis.lt',
